@@ -1,0 +1,74 @@
+.page_header {
+    background-color: blue;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page_header h3 {
+    color: aliceblue;
+    margin-left: 20px;
+}
+
+.main {
+    width: 70%;
+    margin: auto;
+}
+
+.main .search {
+    margin-top: 10%;
+}
+
+.main .search .btn {
+    margin-top: 20px;
+}
+
+.main .popular-topics .topic-items .item .popular-img {
+    height: 200px;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 0;
+    padding: 0;
+}
+
+.main .popular-topics .topic-items .item .img-1 {
+    background-image: url(img/algebra.png);
+}
+
+.main .popular-topics .topic-items .item .img-2 {
+    background-image: url(img/ds_img.png);
+}
+
+.main .popular-topics .topic-items .item .img-3 {
+    background-image: url(img/linux.png);
+}
+
+.main .popular-topics {
+    margin-top: 20px;
+}
+
+.main .popular-topics .topic-items {
+    width: 100%;
+}
+
+.main .popular-topics .topic-items .item-1,
+.main .popular-topics .topic-items .item-2,
+.main .popular-topics .topic-items .item-3
+ {
+    display: inline-block;
+    width: 30%;
+    height: 290px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    margin-right: 10px;
+    
+}
+
+
+.footer {
+    background-color: grey;
+    height: 110px;
+    margin-top: 17%;
+}
