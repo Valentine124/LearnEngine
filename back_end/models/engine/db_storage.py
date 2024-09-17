@@ -31,7 +31,13 @@ class DBStorage:
     def all_resources(self):
         """ Return all objects of resources """
 
-        return self.__session.query(Resources).all()
+        res_dict = {}
+        res_list = self.__session.query(Resources).all()
+
+        for res_obj in res_list:
+            res_dict[res_obj.title] = res_obj.to_dict()
+
+        return res_dict
 
     def new(self, obj):
         """ Add an item to the database """

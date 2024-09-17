@@ -2,7 +2,7 @@ import yaml
 import json
 
 
-API_KEYS = 'apikeys.yaml'
+API_KEYS = 'models/apikeys.yaml'
 
 with open(API_KEYS, 'r') as key_file:
     keys = yaml.full_load(key_file)

@@ -5,7 +5,7 @@ the Udemy API
 
 
 import requests
-from handle_api_keys import udemy_key
+from models.handle_api_keys import udemy_key
 
 
 def get_courses(q=None):
@@ -20,6 +20,4 @@ def get_courses(q=None):
 
     courses = requests.get(url, headers=header)
 
-    return courses.json()
-
-print(get_courses("data structure"))
+    return courses.json()['results']

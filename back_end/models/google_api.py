@@ -5,8 +5,9 @@ from the google books and search APIs
 
 
 import requests
-from handle_api_keys import google_key
+from models.handle_api_keys import google_key
 
+title = 'Data Structure'
 
 def get_books(q=None):
     """ Get books from the books API based on query string """
