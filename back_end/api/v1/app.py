@@ -15,7 +15,7 @@ def resources(title):
         dict = {}
 
         for res_item in res.keys():
-            if title in res_item:
+            if title.lower() in res_item.lower():
                 dict[res_item] = res[res_item]
         if dict:
             # title has no match in db
@@ -23,7 +23,7 @@ def resources(title):
             res_2 = storage.all_resources()
 
             for res_item in res_2.keys():
-                if title in res_item:
+                if title.lower() in res_item.lower():
                     dict[res_item] = res_2[res_item]
             if not dict:
                 return '{ "error": "Topic not found" }'
@@ -35,7 +35,7 @@ def resources(title):
     new_dict = {}
 
     for key in res.keys():
-        if title in key:
+        if title.lower() in key.lower():
             new_dict[key] = res[key]
 
     return jsonify(new_dict)

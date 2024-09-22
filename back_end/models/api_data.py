@@ -43,7 +43,7 @@ def save_sites(title):
 
     for item in sites:
         resource = Resources()
-        resource.title = item['title']
+        resource.title = trunc_str(item['title'])
         resource.description = trunc_str(item['snippet'])
         resource.origin = 'Google Search'
         resource.type = 'articles'
