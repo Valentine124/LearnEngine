@@ -12,63 +12,39 @@
 }
 
 .main {
-    width: 70%;
-    margin: auto;
+    margin-top: 200px;
 }
 
 .main .search {
-    margin-top: 10%;
+    width: 70%;
+    margin: auto;
 }
 
 .main .search .btn {
     margin-top: 20px;
 }
 
-.main .popular-topics .topic-items .item .popular-img {
-    height: 200px;
-    width: 100%;
-    background-repeat: no-repeat;
-    background-size: contain;
-    margin: 0;
-    padding: 0;
+#resource-body .card {
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.main .popular-topics .topic-items .item .img-1 {
-    background-image: url(img/algebra.png);
+#resource-body .card .card-img {
+    height: 60%;
 }
 
-.main .popular-topics .topic-items .item .img-2 {
-    background-image: url(img/ds_img.png);
+#resource-body .card .card-title,
+#resource-body .card .card-desc,
+#resource-body .card .card-type,
+#resource-body .card .card-origin {
+    padding: 0px;
+    margin-left: 20px;
 }
 
-.main .popular-topics .topic-items .item .img-3 {
-    background-image: url(img/linux.png);
-}
-
-.main .popular-topics {
-    margin-top: 20px;
-}
-
-.main .popular-topics .topic-items {
-    width: 100%;
-}
-
-.main .popular-topics .topic-items .item-1,
-.main .popular-topics .topic-items .item-2,
-.main .popular-topics .topic-items .item-3
- {
-    display: inline-block;
-    width: 30%;
-    height: 290px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
-    margin-right: 10px;
-    
-}
-
-
-.footer {
-    background-color: grey;
-    height: 110px;
-    margin-top: 17%;
+#resource-body .card .card-origin {
+    padding-bottom: 30px;
 }
