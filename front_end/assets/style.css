@@ -1,0 +1,50 @@
+.page_header {
+    background-color: blue;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.page_header h3 {
+    color: aliceblue;
+    margin-left: 20px;
+}
+
+.main {
+    margin-top: 200px;
+}
+
+.main .search {
+    width: 70%;
+    margin: auto;
+}
+
+.main .search .btn {
+    margin-top: 20px;
+}
+
+#resource-body .card {
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#resource-body .card .card-img {
+    height: 60%;
+}
+
+#resource-body .card .card-title,
+#resource-body .card .card-desc,
+#resource-body .card .card-type,
+#resource-body .card .card-origin {
+    padding: 0px;
+    margin-left: 20px;
+}
+
+#resource-body .card .card-origin {
+    padding-bottom: 30px;
+}
