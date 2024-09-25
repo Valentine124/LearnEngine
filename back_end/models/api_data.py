@@ -27,7 +27,7 @@ def save_books(title):
 
     for item in books:
         resource = Resources()
-        resource.title = item['volumeInfo']['title']
+        resource.title = trunc_str(item['volumeInfo']['title'])
         resource.description = trunc_str(item['volumeInfo']['description'])
         resource.origin = 'Google Books'
         resource.type = 'book'
@@ -43,8 +43,8 @@ def save_sites(title):
 
     for item in sites:
         resource = Resources()
-        resource.title = trunc_str(item['title'])
-        resource.description = trunc_str(item['snippet'])
+        resource.title = item['title']
+        resource.description = item['snippet']
         resource.origin = 'Google Search'
         resource.type = 'articles'
         resource.url = item['link']
@@ -58,7 +58,7 @@ def save_videos(title):
     for item in videos:
         resource = Resources()
         resource.title = item['snippet']['title']
-        resource.description = trunc_str(item['snippet']['description'])
+        resource.description = item['snippet']['description']
         resource.origin = 'Youtube'
         resource.type = 'video'
         resource.url = f'https://www.youtube.com/watch?v={item["id"]["videoId"]}'
@@ -72,10 +72,10 @@ def save_courses(title):
     for item in courses:
         resource = Resources()
         resource.title = item['title']
-        resource.description = trunc_str(item['headline'])
+        resource.description = item['headline']
         resource.origin = 'Udemy'
         resource.type = 'course'
-        resource.url = item['url']
+        resource.url = f"https://www.udemy.com{item['url']}"
         resource.img = item['image_125_H']
 
         storage.new(resource)

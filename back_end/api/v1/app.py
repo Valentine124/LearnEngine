@@ -9,27 +9,6 @@ app = Flask(__name__)
 
 @app.route('/api/v1/resources/<title>', strict_slashes=True)
 def resources(title):
-    if storage.all_resources():
-        # Read from database
-        res = storage.all_resources()
-        dict = {}
-
-        for res_item in res.keys():
-            if title.lower() in res_item.lower():
-                dict[res_item] = res[res_item]
-        if dict:
-            # title has no match in db
-            resource_data(title)
-            res_2 = storage.all_resources()
-
-            for res_item in res_2.keys():
-                if title.lower() in res_item.lower():
-                    dict[res_item] = res_2[res_item]
-            if not dict:
-                return '{ "error": "Topic not found" }'
-            return jsonify(dict)
-        return jsonify(dict)
-
     resource_data(title)
     res = storage.all_resources()
     new_dict = {}

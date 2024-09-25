@@ -1,5 +1,4 @@
 # LearnEngine
-----
 **LearnEngine** is a software as a service that utilizes third party APIs to provide users with resources base on a searched topic.
 **LearnEngine** will help provide users with necessary resources for a topic. Users just need to type the topic and **LearnEngine** will provides different resources (article, videos, e.t.c) that explains the topic.
 
