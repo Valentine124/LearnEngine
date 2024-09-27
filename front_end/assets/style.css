@@ -1,3 +1,10 @@
+/**
+ *
+ * Main CSS style for the LearnEngine project
+ *
+ *
+*/
+
 .page_header {
     background-color: blue;
     height: 60px;
@@ -36,6 +43,10 @@
 #resource-body .card .card-img {
     height: 60%;
 }
+
+/**
+ * Styles for the resource cards
+*/
 
 #resource-body .card .card-title,
 #resource-body .card .card-desc,

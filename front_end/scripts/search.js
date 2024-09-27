@@ -1,12 +1,25 @@
+/**
+ * 
+ * 
+ * This file contains codes that will dylamically
+ * generate content from the backend and populate
+ * it on the front end
+ * 
+ * 
+ */
 
 const searchInput = document.querySelector("#input");
 const searchBtn = document.querySelector("#search_btn");
 const resTitle = document.querySelector("#resource-header");
 const resBody = document.querySelector("#resource-body");
 
+/**
+ * Handles the submit button clicked event
+ */
 search_btn.onclick = function() {
     const inputValue = searchInput.value;
 
+    // set the default values for the result dialogue box
     resTitle.textContent = 'Searching Topic';
     resBody.textContent = 'Loading...'
     if (inputValue == null || inputValue == "") {
@@ -25,6 +38,8 @@ search_btn.onclick = function() {
         .then(resources => {
             resTitle.textContent = 'Resources on ' + inputValue;
             resBody.textContent = '';
+
+            // Loop through the response and populate it to the frontend
             for (const [key, value] of Object.entries(resources)) {
                 renderResources(value);
             }
@@ -37,6 +52,11 @@ search_btn.onclick = function() {
     }
 };
 
+/**
+ * Creates a card to render the data from api
+ * 
+ * @param {Resources} resources 
+ */
 function renderResources(resources) {
     const div = document.createElement('div');
     const title = document.createElement('h5');
@@ -67,6 +87,7 @@ function renderResources(resources) {
 
     resBody.appendChild(div);
 
+    // Handle each resource card click event
     div.onclick  = function() {
         window.location.href = url;
     };

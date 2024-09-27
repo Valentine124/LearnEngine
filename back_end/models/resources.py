@@ -27,6 +27,7 @@ class Resources(Base):
 
         new_dict = self.__dict__.copy()
 
+        # Remove _sa_instance_state if it exist
         if '_sa_instance_state' in new_dict.keys():
             del new_dict['_sa_instance_state']
 

@@ -9,7 +9,15 @@ app = Flask(__name__)
 
 @app.route('/api/v1/resources/<title>', strict_slashes=True)
 def resources(title):
+    """ 
+    Search the parameter in the databese and return
+    a json string to the client.
+    """
+
+    # Call the function that request all the apis
+    # and save the result to the database
     resource_data(title)
+    # Get all resources from the database
     res = storage.all_resources()
     new_dict = {}
 

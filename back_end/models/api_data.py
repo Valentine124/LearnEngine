@@ -15,6 +15,8 @@ def resource_data(title=None):
     if title is None or title == '':
         return None
 
+    # Call the functions that saves the resources
+    # to the database
     save_books(title)
     save_sites(title)
     save_videos(title)
@@ -53,6 +55,7 @@ def save_sites(title):
         storage.new(resource)
 
 def save_videos(title):
+    """ Save the result of the video api to the database """
     videos = get_videos(title)
 
     for item in videos:
@@ -67,6 +70,7 @@ def save_videos(title):
         storage.new(resource)
 
 def save_courses(title):
+    """ Save the response of udemy api to the database """
     courses = get_courses(title)
 
     for item in courses:
